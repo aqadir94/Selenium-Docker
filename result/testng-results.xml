@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-20T04:08:33 GMT" name="Suite" finished-at="2024-12-20T04:09:18 GMT" duration-ms="45181">
+    <groups>
+    </groups>
+    <test started-at="2024-12-20T04:08:33 GMT" name="Test1" finished-at="2024-12-20T04:08:55 GMT" duration-ms="22303">
+      <class name="com.reservation.tests.PortalTest">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.reservation.tests.PortalTest@4d154ccd]" started-at="2024-12-20T04:08:33 GMT" name="beforeTest" finished-at="2024-12-20T04:08:36 GMT" duration-ms="3017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6933b6c6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.reservation.tests.PortalTest@4d154ccd]" started-at="2024-12-20T04:08:36 GMT" name="beforeClass" finished-at="2024-12-20T04:08:36 GMT" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/vendor-portal-data.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="logInTest()[pri:0, instance:com.reservation.tests.PortalTest@4d154ccd]" started-at="2024-12-20T04:08:36 GMT" name="logInTest" finished-at="2024-12-20T04:08:40 GMT" duration-ms="3713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method signature="dashBoardTest()[pri:0, instance:com.reservation.tests.PortalTest@4d154ccd]" started-at="2024-12-20T04:08:40 GMT" name="dashBoardTest" finished-at="2024-12-20T04:08:55 GMT" depends-on-methods="com.reservation.tests.PortalTest.logInTest" duration-ms="15072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashBoardTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.reservation.tests.PortalTest@4d154ccd]" started-at="2024-12-20T04:08:55 GMT" name="afterTest" finished-at="2024-12-20T04:08:55 GMT" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.reservation.tests.PortalTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-12-20T04:08:55 GMT" name="Test2" finished-at="2024-12-20T04:09:18 GMT" duration-ms="22504">
+      <class name="com.reservation.tests.PortalTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:08:33 GMT" name="beforeSuite" finished-at="2024-12-20T04:08:33 GMT" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:08:55 GMT" name="beforeTest" finished-at="2024-12-20T04:08:57 GMT" duration-ms="1592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7d3e8655]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:08:57 GMT" name="beforeClass" finished-at="2024-12-20T04:08:57 GMT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/vendor-portal-data2.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="logInTest()[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:08:57 GMT" name="logInTest" finished-at="2024-12-20T04:09:05 GMT" duration-ms="8053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method signature="dashBoardTest()[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:09:05 GMT" name="dashBoardTest" finished-at="2024-12-20T04:09:18 GMT" depends-on-methods="com.reservation.tests.PortalTest.logInTest" duration-ms="12559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashBoardTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.reservation.tests.PortalTest@53045c6c]" started-at="2024-12-20T04:09:18 GMT" name="afterTest" finished-at="2024-12-20T04:09:18 GMT" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.reservation.tests.PortalTest -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
