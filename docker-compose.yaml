@@ -43,7 +43,7 @@ services:
       - TEST_SUITE=Portal_Test.xml
     volumes:
       - ./output/vendor-portal:/home/selenium-docker/test-output
-      - ./test-data/customer1.json:/home/selenium-docker/test-data/customer1.json
+
 
   # flight-reservation:
   #   image: aqadir9456/seleniium

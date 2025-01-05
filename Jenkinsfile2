@@ -16,8 +16,9 @@ bat 'docker compose up'
 
 stage('Bring down the containers'){
 
-
+steps{
 bat 'docker compose down'
+}
     
 }
 
