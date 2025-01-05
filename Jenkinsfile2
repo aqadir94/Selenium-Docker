@@ -1,0 +1,28 @@
+pipeline{
+
+agent any
+
+stages{
+
+stage('Run the tests'){
+
+steps{
+
+bat 'docker compose up'
+
+}
+
+}
+
+stage('Bring down the containers'){
+
+
+bat 'docker compose down'
+    
+}
+
+
+
+}
+
+}
