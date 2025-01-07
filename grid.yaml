@@ -1,0 +1,33 @@
+
+services:
+  hub:
+    image: selenium/hub:4.20
+    environment:
+      - SE_GRID_MAX_SESSION=5
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:4444/status" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  chrome:
+    image: selenium/node-chrome:4.20
+    shm_size: '2g'
+    depends_on:
+      hub:
+        condition: service_healthy
+    deploy:
+      replicas: 1
+    env_file: .env
+
+  firefox:
+    image: selenium/node-firefox:4.20
+    shm_size: '2g'
+    depends_on:
+      hub:
+        condition: service_healthy
+    deploy:
+      replicas: 1
+    env_file: .env
+
+

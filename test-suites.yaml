@@ -1,0 +1,12 @@
+version: '3.9'  # Specify the version of the Compose file
+
+services:
+  vendor-portal:
+    image: aqadir9456/seleniium
+    environment:
+      - BROWSER=firefox
+      - HUB_HOST=hub
+      - THREAD_COUNT=1
+      - TEST_SUITE=Portal_Test.xml
+    volumes:
+      - ./output/vendor-portal:/home/selenium-docker/test-output

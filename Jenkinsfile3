@@ -1,0 +1,40 @@
+pipeline{
+
+agent any
+
+stages{
+
+stage('Bring up the grid'){
+
+steps{
+
+bat 'docker-compose -f grid.yaml up -d'
+
+}
+
+}
+
+stage('Run the tests'){
+
+steps{
+
+bat 'docker-compose -f test-suites.yaml up'
+
+}
+
+}
+
+stage('Bring down the containers'){
+
+steps{
+bat 'docker-compose -f grid.yaml down'
+bat 'docker-compose -f test-suites.yaml down'
+}
+    
+}
+
+
+
+}
+
+}
