@@ -17,7 +17,7 @@ services:
       hub:
         condition: service_healthy
     deploy:
-      replicas: 1
+      replicas: 0
     env_file: .env
 
   firefox:
@@ -27,7 +27,7 @@ services:
       hub:
         condition: service_healthy
     deploy:
-      replicas: 1
+      replicas: 0
     env_file: .env
 
 
