@@ -2,50 +2,49 @@ pipeline{
 
 agent any
 
+parameters {
+  choice choices: ['chrome', 'firefox'], description: 'select a browser', name: 'Browser'
+}
+
 stages{
 
-stage('Build Jar'){
+stage('Bring up the grid'){
 
 steps{
 
-bat 'mvn clean package -DskipTests'
+bat 'docker-compose -f grid.yaml up --scale ${params.BROWSER}=2 -d'
 
 }
 
 }
 
-stage('Build docker image'){
-
-
+stage('Run the tests'){
 
 steps{
-    
-bat 'docker build -t=aqadir9456/seleniium .'
-}
-    
+
+bat 'docker-compose -f test-suites.yaml up'
+
 }
 
-stage('Push Image'){
-environment{
-DOCKER_HUB=credentials('docker-creds')
 }
+
+stage('Bring down the containers'){
+
 steps{
-
-bat 'echo %DOCKER_HUB_PSW% | docker login -u %DOCKER_HUB_USR% --password-stdin'
-bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
-bat 'docker push aqadir9456/seleniium'
+bat 'docker-compose -f grid.yaml down'
+bat 'docker-compose -f test-suites.yaml down'
 }
     
 }
 
-}
 
-post{
-	
-	always{
-		
-		bat "docker logout"
-	}
+
 }
+post {
+    always {
+        archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymlinks: false
+        }
+    }
+
 
 }
