@@ -12,7 +12,7 @@ stage('Bring up the grid'){
 
 steps{
 
-bat 'docker-compose -f grid.yaml up --scale ${params.BROWSER}=2 -d'
+bat 'docker-compose -f grid.yaml up --scale ${params.BROWSER}=1 -d'
 
 }
 
