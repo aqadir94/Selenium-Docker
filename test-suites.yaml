@@ -4,7 +4,7 @@ services:
   vendor-portal:
     image: aqadir9456/seleniium
     environment:
-      - BROWSER=firefox
+      - BROWSER
       - HUB_HOST=hub
       - THREAD_COUNT=1
       - TEST_SUITE=Portal_Test.xml
