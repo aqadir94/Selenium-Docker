@@ -42,7 +42,7 @@ pipeline {
 
         stage('Bring Up the Grid') {
             steps {
-                bat "docker-compose -f grid.yaml up --scale ${params.BROWSER}=1 -d –pull=always"
+                bat "docker-compose -f grid.yaml up --scale ${params.BROWSER}=1 -d -â€“pull=always"
             }
         }
 
